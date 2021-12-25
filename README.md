@@ -5,4 +5,4 @@ You can enter any product (apple, wine, chicken...) and get information about ho
 
 Nutrition API by API Ninjas is used to get information about different products.
 
-HTML, JS and CSS are used.
+HTML, Javascript and CSS are used.
