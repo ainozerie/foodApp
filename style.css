@@ -1,0 +1,262 @@
+:root {
+  --main-color: #533a7b;
+  --carbs-color: #f1e3e4;
+  --protein-color: #c874d9;
+  --fat--color: #87f1ff;
+  --bg-color: whitesmoke;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: monospace;
+}
+h1,
+h2,
+h3,
+p {
+  color: rgb(30, 30, 30);
+}
+h1 {
+  font-size: 20px;
+  color: var(--bg-color);
+}
+h2 {
+  font-size: 18px;
+}
+h3 {
+  font-size: 16px;
+}
+header {
+  background: var(--main-color);
+  height: 65px;
+  box-shadow: 0 4px 4px 0 lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  width: 650px;
+  padding: 0 20px 20px 20px;
+}
+.main_wrapper {
+  display: flex;
+  justify-content: center;
+}
+.input_wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0 4px 4px 0 lightgray;
+}
+input {
+  height: 30px;
+  width: 300px;
+  margin: 0 20px;
+  padding: 3px 10px 3px 10px;
+  font-size: 15px;
+  color: rgb(30, 30, 30);
+  border: 1px solid var(--bg-color);
+  font-family: monospace;
+}
+button {
+  height: 40px;
+  width: 160px;
+  color: rgb(30, 30, 30);
+  font-family: monospace;
+  border: none;
+  background-color: var(--protein-color);
+  border-radius: 2px;
+  transition: ease-in;
+  transition-duration: 200ms;
+  font-size: 16px;
+}
+button:hover {
+  scale: 1.05;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 20px;
+  background-color: white;
+  box-shadow: 0 4px 4px 0 lightgray;
+}
+.stats_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carbs_protein_fat {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.pie_chart {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--carbs-color) 30%,
+    var(--protein-color) 30% 70%,
+    var(--fat--color) 70% 100%
+  );
+  border: 2px solid whitesmoke;
+  transition: ease-in;
+  transition-duration: 300ms;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.pie_chart:hover {
+  scale: 1.05;
+}
+
+.white_space {
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in;
+  transition-duration: 300ms;
+}
+.no_data {
+  opacity: 1;
+}
+
+.carbs,
+.protein,
+.fat {
+  height: 30px;
+  width: 140px;
+  margin: 5px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in;
+  transition-duration: 300ms;
+}
+.carbs:hover {
+  scale: 1.05;
+}
+.protein:hover {
+  scale: 1.05;
+}
+.fat:hover {
+  scale: 1.05;
+}
+.protein {
+  background-color: var(--protein-color);
+}
+.fat {
+  background-color: var(--fat--color);
+}
+.carbs {
+  background-color: var(--carbs-color);
+}
+.log {
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 lightgray;
+}
+.cards_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+.card {
+  width: 150px;
+  flex-grow: 4;
+  background-color: white;
+  margin-inline: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 lightgray;
+}
+@media (min-width: 551px) {
+  .card:nth-child(3n-1) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.card:last-child {
+  margin-right: 10px;
+  opacity: 0;
+}
+.card p {
+  padding: 5px 5px 5px 0;
+}
+.notification {
+  background-color: var(--bg-color);
+  height: 50px;
+  width: 200px;
+  box-shadow: 0 4px 8px 0 lightgray;
+  position: absolute;
+  margin-left: 415px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+.no_notification {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  main {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 1070px) {
+  .notification {
+    display: none;
+  }
+  .no_notification {
+    display: flex;
+    text-align: center;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 550px) {
+  .card {
+    margin: 0 10px 10px 10px;
+  }
+  .card:nth-child(2n) {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .input_wrapper {
+    flex-direction: column;
+  }
+  input {
+    width: 260px;
+    margin: 10px;
+  }
+}
+@media (max-width: 370px) {
+  .card:nth-child(n) {
+    margin: 0 10px 10px 10px;
+  }
+}
